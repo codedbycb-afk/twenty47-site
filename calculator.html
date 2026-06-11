@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missed-Call Money Calculator | Twenty47 Marketing</title>
+<meta name="description" content="See exactly how much money your missed calls are costing your contracting business — in 30 seconds.">
+<style>
+  :root{
+    --bg:#0b0f14; --card:#121821; --line:#1f2a37; --txt:#e8eef5; --mut:#8aa0b6;
+    --accent:#f97316; --accent2:#ea6a0c; --danger:#ff5d5d; --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;padding:24px 16px;display:flex;justify-content:center}
+  .wrap{width:100%;max-width:560px}
+  .brand{font-weight:800;letter-spacing:.5px;font-size:14px;color:var(--mut);text-align:center;margin-bottom:20px}
+  .brand b{color:var(--accent)}
+  h1{font-size:30px;line-height:1.15;font-weight:800;text-align:center;margin-bottom:8px}
+  h1 .hl{color:var(--danger)}
+  .sub{color:var(--mut);text-align:center;margin-bottom:26px;font-size:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px}
+  .field{margin-bottom:20px}
+  .field:last-child{margin-bottom:0}
+  label{display:flex;justify-content:space-between;align-items:baseline;font-weight:600;margin-bottom:10px}
+  label .val{color:var(--accent);font-weight:800;font-size:18px}
+  input[type=range]{-webkit-appearance:none;width:100%;height:6px;border-radius:6px;background:var(--line);outline:none}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;
+    background:var(--accent);cursor:pointer;border:3px solid #0b0f14;box-shadow:0 0 0 1px var(--accent)}
+  input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--accent);cursor:pointer;border:3px solid #0b0f14}
+  .hint{color:var(--mut);font-size:13px;margin-top:6px}
+  .result{background:linear-gradient(160deg,#161d27,#0e141c);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 22px;text-align:center;margin-bottom:18px}
+  .result .lbl{color:var(--mut);font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+  .big{font-size:46px;font-weight:800;color:var(--danger);line-height:1;letter-spacing:-1px}
+  .yr{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);color:var(--mut);font-size:15px}
+  .yr b{color:var(--txt);font-size:20px}
+  .cta{display:block;width:100%;text-align:center;background:var(--accent);color:#180a02;font-weight:800;font-size:18px;
+    padding:18px;border:none;border-radius:14px;cursor:pointer;text-decoration:none;margin-top:6px;transition:.15s}
+  .cta:hover{background:var(--accent2)}
+  .ctanote{text-align:center;color:var(--mut);font-size:13px;margin-top:10px}
+  .guarantee{display:flex;gap:10px;align-items:flex-start;background:#0f1620;border:1px solid var(--line);
+    border-radius:12px;padding:14px;margin-top:18px;font-size:14px;color:var(--mut)}
+  .guarantee b{color:var(--accent)}
+  .foot{text-align:center;color:#54657a;font-size:12px;margin-top:22px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">twenty<b>47</b></div>
+  <h1>You're losing <span class="hl">real money</span> to missed calls.</h1>
+  <p class="sub">Drag the sliders. See your number. It takes 30 seconds.</p>
+
+  <div class="card">
+    <div class="field">
+      <label>Calls you miss per week <span class="val" id="callsVal">12</span></label>
+      <input type="range" id="calls" min="1" max="50" value="12">
+      <div class="hint">Rings out, after-hours, on a job, voicemail — all of it.</div>
+    </div>
+    <div class="field">
+      <label>Average job value <span class="val" id="ticketVal">$750</span></label>
+      <input type="range" id="ticket" min="150" max="10000" step="50" value="750">
+      <div class="hint">Typical ticket for a booked job.</div>
+    </div>
+    <div class="field">
+      <label>Of missed callers, % you'd have closed <span class="val" id="closeVal">35%</span></label>
+      <input type="range" id="close" min="5" max="80" step="5" value="35">
+      <div class="hint">Be honest — most owners close 30–50% of inbound.</div>
+    </div>
+  </div>
+
+  <div class="result">
+    <div class="lbl">You're losing about</div>
+    <div class="big" id="monthly">$13,650</div>
+    <div class="lbl" style="margin-top:4px">every month</div>
+    <div class="yr">That's <b id="yearly">$163,800</b> a year walking to the competitor who answered.</div>
+  </div>
+
+  <!-- TODO: replace href with GHL booking calendar link / embed calendar iframe -->
+  <a class="cta" id="book" href="#book">Stop the bleeding — book a 15-min call →</a>
+  <div class="ctanote">We'll show you the AI receptionist booking jobs live. No pressure.</div>
+
+  <div class="guarantee">
+    <span>🛡️</span>
+    <div><b>Our guarantee:</b> if it doesn't book you enough jobs to cover setup in 60 days, you don't pay the monthly until it does.</div>
+  </div>
+
+  <div class="foot">Twenty47 Marketing · AI receptionist + speed-to-lead for home-services pros</div>
+</div>
+
+<script>
+  const fmt = n => '$' + Math.round(n).toLocaleString('en-US');
+  const calls=document.getElementById('calls'), ticket=document.getElementById('ticket'), close=document.getElementById('close');
+  const callsVal=document.getElementById('callsVal'), ticketVal=document.getElementById('ticketVal'), closeVal=document.getElementById('closeVal');
+  const monthly=document.getElementById('monthly'), yearly=document.getElementById('yearly');
+  function calc(){
+    const c=+calls.value, t=+ticket.value, p=+close.value/100;
+    callsVal.textContent=c; ticketVal.textContent=fmt(t); closeVal.textContent=close.value+'%';
+    const m = c*4.33*t*p;            // missed/wk → /mo, × ticket × close rate
+    monthly.textContent=fmt(m);
+    yearly.textContent=fmt(m*12);
+  }
+  [calls,ticket,close].forEach(el=>el.addEventListener('input',calc));
+  calc();
+  // Booking CTA — wire to GHL calendar once location is connected.
+  // document.getElementById('book').href = 'https://api.leadconnectorhq.com/widget/booking/XXXX';
+</script>
+</body>
+</html>

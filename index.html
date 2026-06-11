@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Never miss a lead again | Twenty47 Marketing</title>
+<meta name="description" content="Every call, text, DM, and email to your business — answered, qualified, and booked 24/7. You just show up and do the work.">
+<meta property="og:title" content="Never miss a lead again | Twenty47 Marketing">
+<meta property="og:description" content="We catch, nurture, and book every lead on every platform into your calendar.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Handshake structure · Twenty47 orange identity */
+    --deep-space:#000000; --midnight:#14151c; --cosmic:#0a0a0a; --stardust:#ffffff; --muted:#8b8b8b;
+    --accent:#f97316; --accent2:#fb923c; --amber:#fbbf24; --danger:#ef4444;
+    --line:rgba(255,255,255,.12); --line2:rgba(255,255,255,.22); --ghost:rgba(255,255,255,.05); --ghost2:rgba(255,255,255,.08);
+    --nebula:radial-gradient(circle at 50% 30%, rgba(251,146,60,.55) 0%, rgba(249,115,22,.32) 42%, rgba(0,0,0,0) 74%);
+    --f-disp:'Anton',Impact,sans-serif; --f-body:'Inter',ui-sans-serif,system-ui,sans-serif;
+    --s8:8px;--s16:16px;--s24:24px;--s32:32px;--s40:40px;--s64:64px;--s80:80px;--s120:120px;
+    --r-btn:8px;--r-btnlg:12px;--r-card:24px;--r-full:9999px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--deep-space);color:var(--stardust);font-family:var(--f-body);font-size:16px;line-height:1.4;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-feature-settings:"ss03","ss06"}
+  .disp{font-family:var(--f-disp);font-weight:400;text-transform:uppercase;line-height:.85;letter-spacing:-.02em}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 24px}
+  .narrow{max-width:720px;margin:0 auto}
+  a{color:inherit;text-decoration:none}
+  .muted{color:var(--muted)}
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-body);font-weight:500;cursor:pointer;border:none;transition:.18s;border-radius:var(--r-btn)}
+  .fill{background:var(--accent);color:#000;}
+  .fill:hover{background:var(--accent2);transform:translateY(-1px)}
+  .ghost{background:transparent;color:var(--stardust);border:1px solid var(--line2)}
+  .ghost:hover{border-color:var(--accent);color:var(--accent2)}
+  .lg{padding:16px 28px;font-size:16px;border-radius:var(--r-btnlg)}
+  .sm{padding:12px 18px;font-size:14px}
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:rgba(0,0,0,.7);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 24px}
+  .logo{font-family:var(--f-disp);font-size:24px;letter-spacing:.02em}.logo b{color:var(--accent)}.logo{display:inline-flex;align-items:center;gap:8px}.logo-dot{width:9px;height:9px;border-radius:50%;background:var(--accent);display:inline-block;animation:pulse 1.8s ease-in-out infinite}@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(249,115,22,.5)}50%{box-shadow:0 0 0 6px rgba(249,115,22,0)}}
+  /* hero */
+  .hero{position:relative;text-align:center;padding:var(--s120) 0 var(--s80);overflow:hidden}
+  .neb{position:absolute;inset:-30% -10% auto -10%;height:900px;background:var(--nebula);pointer-events:none;z-index:0;
+    animation:drift 18s ease-in-out infinite alternate;filter:saturate(1.1)}
+  @keyframes drift{0%{transform:translate(-4%, -2%) scale(1)}100%{transform:translate(6%, 4%) scale(1.12)}}
+  .hero .wrap{position:relative;z-index:1}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--ghost2);border:1px solid var(--line2);color:var(--stardust);font-size:12px;font-weight:500;padding:8px 16px;border-radius:var(--r-full);margin-bottom:var(--s32)}
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(249,115,22,.25)}
+  .hero h1{font-family:var(--f-disp);text-transform:uppercase;font-weight:400;font-size:clamp(52px,13vw,150px);line-height:.82;letter-spacing:-.025em;margin-bottom:var(--s32)}
+  .hero h1 .acc{color:var(--accent)}
+  .lede{color:var(--stardust);font-size:clamp(18px,2.6vw,24px);font-weight:400;max-width:640px;margin:0 auto var(--s40);line-height:1.4}
+  .lede b{color:var(--accent2)}
+  .cta-row{display:flex;gap:var(--s16);justify-content:center;flex-wrap:wrap}
+  .chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:var(--s40)}
+  .chip{background:var(--ghost);border:1px solid var(--line);border-radius:var(--r-full);padding:8px 16px;font-size:13px;color:var(--muted)}
+  .chip b{color:var(--stardust);font-weight:500}
+  /* sections */
+  section{padding:var(--s80) 0;position:relative}
+  .eyebrow{color:var(--accent);font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:var(--s16);text-align:center}
+  h2.disp{font-size:clamp(34px,6.5vw,76px);text-align:center;margin-bottom:var(--s24)}
+  h2.disp .acc{color:var(--accent)}
+  .sub{color:var(--muted);text-align:center;max-width:600px;margin:0 auto var(--s40);font-size:18px;line-height:1.5}
+  .sub b{color:var(--stardust)}
+  /* ghost card */
+  .card{background:var(--ghost);border:1px solid var(--line);border-radius:var(--r-card);padding:var(--s32)}
+  /* omnichannel */
+  .channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:var(--s16);margin-bottom:var(--s24)}
+  .ch{background:var(--ghost);border:1px solid var(--line);border-radius:var(--r-card);padding:var(--s24);display:flex;align-items:center;gap:14px;transition:.18s}
+  .ch:hover{border-color:var(--accent);background:var(--ghost2);transform:translateY(-3px)}
+  .ch .ic{width:44px;height:44px;border-radius:12px;background:rgba(249,115,22,.12);display:flex;align-items:center;justify-content:center;font-size:21px;flex:0 0 44px}
+  .ch h3{font-size:15px;font-weight:600;margin-bottom:2px}.ch p{font-size:12px;color:var(--muted)}
+  .funnel{text-align:center;border:1px solid var(--accent);border-radius:var(--r-card);padding:var(--s40);position:relative;overflow:hidden}
+  .funnel::before{content:"";position:absolute;inset:0;background:var(--nebula);opacity:.5;z-index:0}
+  .funnel>*{position:relative;z-index:1}
+  .funnel .big-ic{font-size:30px;margin-bottom:8px}
+  .funnel h3{font-family:var(--f-disp);text-transform:uppercase;font-size:28px;letter-spacing:-.02em;margin-bottom:8px}
+  /* calculator */
+  .field{margin-bottom:var(--s24)}.field:last-child{margin-bottom:0}
+  label{display:flex;justify-content:space-between;align-items:baseline;font-weight:500;margin-bottom:12px}
+  label .val{color:var(--accent2);font-family:var(--f-disp);font-size:22px;letter-spacing:0}
+  input[type=range]{-webkit-appearance:none;width:100%;height:4px;border-radius:var(--r-full);background:var(--line2);outline:none}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--accent);cursor:pointer;border:3px solid #000;box-shadow:0 0 0 1px var(--accent)}
+  input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--accent);cursor:pointer;border:3px solid #000}
+  .hint{color:var(--muted);font-size:13px;margin-top:6px}
+  .result{border:1px solid var(--accent);border-radius:var(--r-card);padding:var(--s40);text-align:center;margin:var(--s24) 0;position:relative;overflow:hidden}
+  .result::before{content:"";position:absolute;inset:0;background:var(--nebula);opacity:.4}
+  .result>*{position:relative;z-index:1}
+  .result .lbl{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+  .big{font-family:var(--f-disp);font-size:clamp(56px,11vw,96px);color:var(--accent);line-height:.85;margin:10px 0;letter-spacing:-.02em}
+  .yr{margin-top:16px;padding-top:16px;border-top:1px solid var(--line2);color:var(--muted);font-size:15px}.yr b{color:var(--stardust);font-family:var(--f-disp);font-size:24px}
+  /* compare */
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:var(--s16)}
+  .col{border-radius:var(--r-card);padding:var(--s32);border:1px solid var(--line);background:var(--ghost)}
+  .col.good{border-color:var(--accent)}
+  .col h3{font-family:var(--f-disp);text-transform:uppercase;font-size:22px;margin-bottom:var(--s16);letter-spacing:-.01em}
+  .col ul{list-style:none}.col li{display:flex;gap:10px;padding:9px 0;font-size:15px;color:var(--muted);align-items:flex-start}
+  .col.good li{color:var(--stardust)}
+  .x{color:var(--danger);font-weight:600}.ck{color:var(--accent);font-weight:600}
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--s16)}
+  .stepc{background:var(--ghost);border:1px solid var(--line);border-radius:var(--r-card);padding:var(--s24)}
+  .stepc .n{font-family:var(--f-disp);font-size:34px;color:var(--accent);line-height:1;margin-bottom:12px}
+  .stepc h3{font-size:17px;font-weight:600;margin-bottom:6px}.stepc p{color:var(--muted);font-size:14px}
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s24);text-align:center}
+  .stat .n{font-family:var(--f-disp);font-size:clamp(44px,7vw,72px);color:var(--accent);line-height:.85;letter-spacing:-.02em}
+  .stat p{color:var(--muted);font-size:13px;margin-top:10px}
+  /* offer */
+  .offer ul{list-style:none;margin:var(--s24) 0}
+  .offer li{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .offer li:last-child{border:none}
+  .guarantee{display:flex;gap:14px;align-items:flex-start;background:rgba(249,115,22,.1);border:1px solid var(--accent);border-radius:var(--r-card);padding:var(--s24);margin-top:var(--s24)}
+  .guarantee b{color:var(--accent2)}
+  /* faq */
+  details{background:var(--ghost);border:1px solid var(--line);border-radius:var(--r-card);padding:20px 24px;margin-bottom:12px}
+  summary{font-weight:500;cursor:pointer;list-style:none;font-size:16px;display:flex;justify-content:space-between;gap:16px}summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--accent);font-family:var(--f-disp);font-size:22px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--muted);margin-top:14px;font-size:15px;line-height:1.6}
+  /* final */
+  .final{text-align:center;border:1px solid var(--accent);border-radius:var(--r-card);padding:var(--s80) var(--s24);position:relative;overflow:hidden}
+  .final::before{content:"";position:absolute;inset:0;background:var(--nebula);opacity:.6}
+  .final>*{position:relative;z-index:1}
+  .final h2{font-size:clamp(38px,7vw,84px)}
+  footer{background:var(--cosmic);border-top:1px solid var(--line);padding:var(--s40) 0;text-align:center;color:#6b6b6b;font-size:13px}
+  footer b{color:var(--accent)}
+  /* sticky mobile */
+  .sticky{position:fixed;bottom:0;left:0;right:0;z-index:70;background:rgba(0,0,0,.92);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 16px;display:none}
+  .sticky .btn{width:100%;justify-content:center}
+  .reveal{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.16,1,.3,1)}.reveal.in{opacity:1;transform:none}
+  @media(max-width:680px){.compare{grid-template-columns:1fr}.sticky{display:flex}body{padding-bottom:78px}section{padding:var(--s64) 0}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><div class="logo">twenty<b>47</b><span class="logo-dot"></span></div><a class="btn fill sm" href="#book">Book a call</a></div></nav>
+
+<section class="hero">
+  <div class="neb"></div>
+  <div class="wrap">
+    <span class="pill"><span class="dot"></span>For HVAC · Plumbing · Roofing</span>
+    <h1 class="disp">Never miss<br>a lead <span class="acc">again</span></h1>
+    <p class="lede">Calls, texts, Instagram DMs, Facebook messages, emails — <b>caught, qualified, and booked 24/7</b>. You just show up and do the work.</p>
+    <div class="cta-row">
+      <a class="btn fill lg" href="#book">Book a 15-min call →</a>
+      <a class="btn ghost lg" href="#calculator">See what you're losing</a>
+    </div>
+    <div class="chips"><span class="chip">📞 Answers <b>24/7</b></span><span class="chip">⚡ Replies <b>&lt;60s</b></span><span class="chip">📲 <b>Every</b> channel</span><span class="chip">🛡️ <b>60-day</b> guarantee</span></div>
+  </div>
+</section>
+
+<section style="padding-top:var(--s40)"><div class="wrap narrow reveal">
+  <h2 class="disp">The job went to whoever<br>answered <span class="acc">first</span></h2>
+  <p class="sub"><b>74% of calls to contractors go unanswered</b> — and that's just the phone. The DM, the text, the form fill at 9pm? Gone too. Every missed lead is a $500–$10,000 job walking to the competitor.</p>
+</div></section>
+
+<!-- OMNICHANNEL -->
+<section style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow">Not just your phone</div>
+  <h2 class="disp">We answer leads <span class="acc">everywhere</span></h2>
+  <p class="sub">Your customers don't just call. They text, they DM, they fill out forms at midnight. We catch and reply to all of it — instantly, in one place.</p>
+  <div class="channels reveal">
+    <div class="ch"><div class="ic">📞</div><div><h3>Phone calls</h3><p>AI voice, sounds human</p></div></div>
+    <div class="ch"><div class="ic">💬</div><div><h3>Text / SMS</h3><p>Instant text-back</p></div></div>
+    <div class="ch"><div class="ic">📷</div><div><h3>Instagram DMs</h3><p>Replies + qualifies</p></div></div>
+    <div class="ch"><div class="ic">👍</div><div><h3>FB Messenger</h3><p>Answered in seconds</p></div></div>
+    <div class="ch"><div class="ic">✉️</div><div><h3>Email</h3><p>Followed up, never dropped</p></div></div>
+    <div class="ch"><div class="ic">💻</div><div><h3>Website chat</h3><p>24/7 live</p></div></div>
+    <div class="ch"><div class="ic">⭐</div><div><h3>Google</h3><p>Messages + reviews</p></div></div>
+    <div class="ch"><div class="ic">📋</div><div><h3>Form fills</h3><p>Called back in &lt;60s</p></div></div>
+  </div>
+  <div class="funnel reveal"><div class="big-ic">⬇️</div><h3>One inbox. Booked in seconds.</h3><p class="muted">Every lead from every channel lands in one place, gets a reply before they move on, and ends up on your calendar.</p></div>
+</div></section>
+
+<!-- CALCULATOR -->
+<section id="calculator"><div class="wrap narrow">
+  <div class="eyebrow">Reality check</div>
+  <h2 class="disp">What are missed<br>leads <span class="acc">costing</span> you?</h2>
+  <p class="sub">Drag the sliders. Most owners guess way too low.</p>
+  <div class="card reveal">
+    <div class="field"><label>Leads you miss per week <span class="val" id="callsVal">12</span></label><input type="range" id="calls" min="1" max="50" value="12"><div class="hint">Missed calls, ignored DMs, after-hours texts, late form replies.</div></div>
+    <div class="field"><label>Average job value <span class="val" id="ticketVal">$750</span></label><input type="range" id="ticket" min="150" max="10000" step="50" value="750"></div>
+    <div class="field"><label>% of those you'd have closed <span class="val" id="closeVal">35%</span></label><input type="range" id="close" min="5" max="80" step="5" value="35"></div>
+  </div>
+  <div class="result reveal"><div class="lbl">You're losing about</div><div class="big" id="monthly">$13,650</div><div class="lbl">every month</div><div class="yr">That's <b id="yearly">$163,800</b>/yr walking to whoever answered first.</div></div>
+  <a class="btn fill lg" style="width:100%;justify-content:center" href="#book">Stop the bleeding — book a call →</a>
+</div></section>
+
+<!-- COMPARE -->
+<section style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+  <h2 class="disp">The <span class="acc">difference</span></h2>
+  <p class="sub">Same leads. Wildly different outcome.</p>
+  <div class="compare reveal">
+    <div class="col"><h3>On your own</h3><ul>
+      <li><span class="x">✕</span> Calls ring out while you're on a job</li>
+      <li><span class="x">✕</span> DMs &amp; texts sit unread for hours</li>
+      <li><span class="x">✕</span> Leads call the next guy on Google</li>
+      <li><span class="x">✕</span> No idea how many jobs you're losing</li>
+      <li><span class="x">✕</span> Nights &amp; weekends = dead air</li>
+    </ul></div>
+    <div class="col good"><h3>With Twenty47</h3><ul>
+      <li><span class="ck">✓</span> Every call, text &amp; DM answered 24/7</li>
+      <li><span class="ck">✓</span> Replies in under 60 seconds, every channel</li>
+      <li><span class="ck">✓</span> Jobs booked straight to your calendar</li>
+      <li><span class="ck">✓</span> Live dashboard of every booking &amp; $ recovered</li>
+      <li><span class="ck">✓</span> Sleep through the night — it never clocks out</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<!-- HOW -->
+<section><div class="wrap">
+  <h2 class="disp">How it <span class="acc">works</span></h2>
+  <p class="sub">Set up in about a week. Nothing for you to learn.</p>
+  <div class="steps reveal">
+    <div class="stepc"><div class="n">01</div><h3>We catch it</h3><p>Every call, text, DM, email, and form — answered instantly, 24/7. Never a voicemail.</p></div>
+    <div class="stepc"><div class="n">02</div><h3>We qualify + nurture</h3><p>Figures out the job, follows up across channels, keeps the lead warm so nothing slips.</p></div>
+    <div class="stepc"><div class="n">03</div><h3>We book it</h3><p>The job lands on your calendar automatically. You watch it live in your app.</p></div>
+    <div class="stepc"><div class="n">04</div><h3>You do the work</h3><p>That's the whole deal. We run the front desk; you run the truck.</p></div>
+  </div>
+</div></section>
+
+<!-- STATS -->
+<section style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap"><div class="stats reveal">
+  <div class="stat"><div class="n">74%</div><p>of contractor calls go unanswered</p></div>
+  <div class="stat"><div class="n">&lt;60s</div><p>response on every channel</p></div>
+  <div class="stat"><div class="n">24/7</div><p>nights, weekends, holidays</p></div>
+  <div class="stat"><div class="n">127</div><p>jobs recovered (one HVAC co, 7 mo)</p></div>
+</div></div></section>
+
+<!-- OFFER -->
+<section><div class="wrap narrow">
+  <div class="eyebrow">The offer</div>
+  <h2 class="disp">Your 24/7 front desk —<br><span class="acc">done for you</span></h2>
+  <div class="card reveal offer" style="margin-top:var(--s24)">
+    <p class="muted">A complete, done-for-you system that answers and books every lead, on every platform — running on your own branded app.</p>
+    <ul>
+      <li><span class="ck">✓</span> AI receptionist answers every <b>call</b> 24/7, sounds human</li>
+      <li><span class="ck">✓</span> Instant reply to every <b>text, IG DM, FB message, email &amp; web chat</b></li>
+      <li><span class="ck">✓</span> Missed-call text-back + speed-to-lead in under 60 seconds</li>
+      <li><span class="ck">✓</span> Jobs booked straight onto your calendar</li>
+      <li><span class="ck">✓</span> Your own <b>branded app</b> — watch every booking roll in live</li>
+      <li><span class="ck">✓</span> Monthly recap: calls answered, jobs booked, dollars recovered</li>
+    </ul>
+    <div class="guarantee"><span style="font-size:22px">🛡️</span><div><b>Zero-risk guarantee:</b> if it doesn't book you enough jobs to cover the setup in 60 days, you don't pay the monthly until it does. The risk is ours, not yours.</div></div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section style="border-top:1px solid var(--line)"><div class="wrap narrow">
+  <h2 class="disp">Questions</h2>
+  <div style="margin-top:var(--s32)">
+    <details><summary>Wait — is this AI?</summary><p>Yes, and it's good. On our call you'll dial a number and hear it answer as YOUR company and book a job. Decide for yourself.</p></details>
+    <details><summary>Does it really cover all my channels?</summary><p>Yes — phone, SMS, Instagram DMs, Facebook Messenger, email, website chat, Google, and form fills all flow into one place and get answered. No more checking five inboxes.</p></details>
+    <details><summary>What if I don't get many leads in the first place?</summary><p>Then catching them isn't your problem — getting them is. We also run a Lead Engine (Google "Google Guaranteed" ads + search) to put more leads on your phone, then this system makes sure none slip. We'll figure out which you need on the call.</p></details>
+    <details><summary>How fast is it set up?</summary><p>About a week. Most builds go live in days — nothing for you to install or learn.</p></details>
+    <details><summary>What's it cost?</summary><p>A one-time setup plus a flat monthly. We only get into numbers once we know it'll make you more than it costs — that's what the call is for.</p></details>
+  </div>
+</div></section>
+
+<!-- FINAL -->
+<section><div class="wrap narrow"><div class="final reveal" id="book">
+  <div class="eyebrow">See it live</div>
+  <h2 class="disp">Hear it answer<br>as <span class="acc">your business</span></h2>
+  <p class="sub" style="margin-top:var(--s24)">Grab a 15-minute call. We build a working demo with your company name, you call it, and you decide. No pressure, no pitch deck.</p>
+  <!-- TODO: replace with GHL booking calendar embed/link -->
+  <a class="btn fill lg" href="#book">Book my 15-min call →</a>
+  <p class="muted" style="font-size:12px;margin-top:18px">* Results vary by market &amp; competition. Case figures are real-world examples, not a promise.</p>
+</div></div></section>
+
+<footer><div class="wrap">twenty<b>47</b> — we make sure every lead gets answered, on every platform.</div></footer>
+
+<div class="sticky"><a class="btn fill lg" href="#book">Book a 15-min call →</a></div>
+
+<script>
+  const fmt=n=>'$'+Math.round(n).toLocaleString('en-US');
+  const calls=document.getElementById('calls'),ticket=document.getElementById('ticket'),close=document.getElementById('close');
+  const cV=document.getElementById('callsVal'),tV=document.getElementById('ticketVal'),clV=document.getElementById('closeVal');
+  const m=document.getElementById('monthly'),y=document.getElementById('yearly');
+  function calc(){const c=+calls.value,t=+ticket.value,p=+close.value/100;cV.textContent=c;tV.textContent=fmt(t);clV.textContent=close.value+'%';const mo=c*4.33*t*p;m.textContent=fmt(mo);y.textContent=fmt(mo*12);}
+  [calls,ticket,close].forEach(e=>e.addEventListener('input',calc));calc();
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
