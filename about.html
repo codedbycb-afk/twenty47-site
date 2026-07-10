@@ -190,16 +190,16 @@
       <div class="ft-col reveal">
         <div class="colhead">Twenty47 Marketing</div>
         <ul>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#system">The System</a></li>
-          <li><a href="index.html#work">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
       </div>
       <div class="ft-col reveal">
         <div class="colhead">Connect with us</div>
         <ul>
-          <li><a href="mailto:codedbycb@gmail.com">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="https://instagram.com/twenty47marketing" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="#">TikTok</a></li>
           <li><a href="#">Facebook</a></li>
@@ -219,45 +219,7 @@
 </main>
 
 <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
-<script>
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  window.addEventListener('load', function(){ document.documentElement.classList.add('loaded'); });
-  setTimeout(function(){ document.documentElement.classList.add('loaded'); }, 900);
+<script src="site.js"></script>
 
-  var lenis = null;
-  if (window.Lenis && !reduced) {
-    lenis = new Lenis({ duration: 1.15, smoothWheel: true });
-    (function raf(t){ lenis.raf(t); requestAnimationFrame(raf); })(0);
-    document.querySelectorAll('a[href^="#"]').forEach(function(a){
-      a.addEventListener('click', function(e){
-        var id = a.getAttribute('href');
-        if (id.length > 1 && document.querySelector(id)) { e.preventDefault(); lenis.scrollTo(id); }
-      });
-    });
-  }
-
-  (function () {
-    var els = document.querySelectorAll('.reveal');
-    if (!('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('in'); }); return; }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
-    els.forEach(function(e){ io.observe(e); });
-    setInterval(function(){
-      els.forEach(function(e){
-        if (!e.classList.contains('in') && e.getBoundingClientRect().top < window.innerHeight) e.classList.add('in');
-      });
-    }, 800);
-  })();
-
-  (function () {
-    var svgs = document.querySelectorAll('footer .scribble');
-    if (!('IntersectionObserver' in window) || reduced) { svgs.forEach(function(s){ s.classList.add('draw'); }); return; }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('draw'); io.unobserve(en.target); } });
-    }, { threshold: 0.4 });
-    svgs.forEach(function(s){ io.observe(s); });
-  })();
-</script>
 </body>
 </html>
