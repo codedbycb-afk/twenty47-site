@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us | Twenty47 Marketing — Cleveland, OH</title>
+<meta name="description" content="Founded in Cleveland during the 2020 shutdown, Twenty47 Marketing is Cam Balazy and Andrew Garcia — websites, automations, lead reactivation, and CRM systems that keep businesses booked 24/7.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ===== about-page-only styles ===== */
+  .about-hero { position: relative; padding: 130px 0 100px; overflow: hidden; }
+  .about-hero h1 .line-serif { display: block; font-family: var(--serif); font-size: clamp(26px, 3.8vw, 46px); letter-spacing: .2em; font-weight: 400; margin-bottom: 8px; text-transform: uppercase; }
+  .about-hero h1 .line-cond { display: block; font-family: var(--cond); font-size: clamp(46px, 8vw, 110px); letter-spacing: .005em; text-transform: uppercase; line-height: .95; }
+  .about-hero h1 .oj { color: var(--orange); }
+  .about-hero .sub { font-size: 16px; color: var(--cream-dim); max-width: 54ch; margin: 30px 0 0; }
+  .about-hero .loc { font-family: var(--mono); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-top: 26px; display: flex; align-items: center; gap: 10px; }
+  .about-hero .loc .dotpulse { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); animation: pulse 2.2s ease-out infinite; }
+
+  /* timeline */
+  .story { padding: 100px 0; border-top: 1px solid var(--line); background: var(--bg-2); }
+  .tl-item { display: grid; grid-template-columns: 170px 1fr; gap: 50px; padding: 60px 0; border-top: 1px solid var(--line); position: relative; }
+  .tl-item:first-of-type { border-top: 0; padding-top: 20px; }
+  .tl-year { font-family: var(--serif); font-size: clamp(44px, 5vw, 72px); color: var(--cream); line-height: 1; }
+  .tl-year .oj { color: var(--orange); }
+  .tl-year .tag-line { display: block; font-family: var(--mono); font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
+  .tl-body h3 { font-family: var(--cond); font-size: clamp(22px, 3vw, 34px); text-transform: uppercase; margin-bottom: 18px; line-height: 1.04; max-width: 24ch; }
+  .tl-body h3 .oj { color: var(--orange); }
+  .tl-body p { color: var(--cream-dim); font-size: 15.5px; max-width: 62ch; margin: 0 0 14px; }
+  .tl-body p b { color: var(--cream); font-weight: 600; }
+  .tl-body p b.oj { color: var(--orange-soft); }
+  @media (max-width: 760px){ .tl-item { grid-template-columns: 1fr; gap: 18px; } }
+
+  /* team cards */
+  .team { padding: 110px 0; border-top: 1px solid var(--line); }
+  .team .head { margin-bottom: 60px; }
+  .team h2 { font-size: clamp(30px, 4.4vw, 54px); text-transform: uppercase; }
+  .team h2 .s { font-family: var(--serif); letter-spacing: .12em; }
+  .team h2 .c { font-family: var(--cond); color: var(--orange); }
+  .tgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .tcard { border: 1px solid var(--line); background: var(--panel); padding: 0; overflow: hidden; }
+  .tcard .port { aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid var(--line); }
+  .tcard .port.p-cam { background: radial-gradient(circle at 30% 25%, rgba(249,115,22,.22), transparent 55%), linear-gradient(160deg, #1d1a15, #0f0d0a); }
+  .tcard .port.p-drew { background: radial-gradient(circle at 70% 25%, rgba(249,115,22,.16), transparent 55%), linear-gradient(200deg, #1a1712, #0f0d0a); }
+  .tcard .port .mono-ring { font-family: var(--serif); font-size: 64px; color: var(--cream); width: 130px; height: 130px; border: 2px solid currentColor; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .tcard .port .role-stamp { position: absolute; top: 16px; left: 16px; font-family: var(--mono); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--cream-dim); border: 1px solid rgba(255,255,255,.16); padding: 5px 10px; background: rgba(0,0,0,.35); }
+  .tcard .info { padding: 30px 30px 34px; }
+  .tcard .info h3 { font-family: var(--cond); font-size: 28px; text-transform: uppercase; margin-bottom: 4px; }
+  .tcard .info .rl { font-family: var(--mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange-soft); margin-bottom: 18px; }
+  .tcard .info p { font-size: 14.5px; color: var(--cream-dim); margin: 0 0 12px; }
+  .tcard .info p b { color: var(--cream); font-weight: 600; }
+  .tcard .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .tcard .skills span { font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); padding: 5px 10px; }
+  @media (max-width: 780px){ .tgrid { grid-template-columns: 1fr; } }
+
+  /* creed strip */
+  .creed { background: var(--light-bg); color: var(--light-ink); padding: 96px 0; }
+  .creed .inner { max-width: 860px; }
+  .creed .slash-eyebrow { color: #8a8272; }
+  .creed h2 { font-size: clamp(26px, 4vw, 46px); text-transform: uppercase; line-height: 1.05; }
+  .creed h2 .s { font-family: var(--serif); letter-spacing: .1em; }
+  .creed h2 .c { font-family: var(--cond); }
+  .creed h2 .oj { color: var(--orange); }
+  .creed p { color: #4a453c; font-size: 16px; max-width: 60ch; margin: 24px 0 0; }
+  .creed .xxx { text-align: right; margin-top: 40px; color: var(--orange); font-size: 20px; letter-spacing: 8px; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- LEFT RAIL -->
+<aside class="rail">
+  <a class="mark" href="index.html" aria-label="Twenty47 home">47</a>
+  <div class="burger" aria-hidden="true"><span></span><span></span><span></span></div>
+  <a class="git" href="#contact"><span class="ast">✳</span> Get in touch</a>
+</aside>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero about-hero">
+  <div class="fade" aria-hidden="true"></div>
+  <div class="inner wrap">
+    <p class="slash-eyebrow">// About Twenty47 Marketing</p>
+    <h1>
+      <span class="mask m1"><span class="mline line-serif">Built in a shutdown.</span></span>
+      <span class="mask m2"><span class="mline line-cond">Running <span class="oj">24/7</span> ever since.</span></span>
+    </h1>
+    <p class="sub">Twenty47 started in 2020 — the year the world stopped — because one thing became obvious: the businesses that survived were the ones that never stopped answering. We've been building always-on machines ever since.</p>
+    <div class="loc"><span class="dotpulse"></span> Cleveland, Ohio — est. 2020</div>
+  </div>
+</section>
+
+<!-- STORY TIMELINE -->
+<section class="story">
+  <div class="wrap">
+    <p class="slash-eyebrow reveal">// The story</p>
+
+    <div class="tl-item reveal">
+      <div class="tl-year">20<span class="oj">20</span><span class="tag-line">The COVID year</span></div>
+      <div class="tl-body">
+        <h3>Certifications on the shelf. A city shut down. <span class="oj">A decision.</span></h3>
+        <p>When everything closed in 2020, <b>Cam Balazy</b> watched Cleveland's small businesses go dark — not because their work wasn't good, but because nobody could reach them. Phones rang out. Websites were outdated or nonexistent. Customers moved on to whoever answered.</p>
+        <p>So he made a decision: put his <b>certifications and resources to work</b>. He started building websites and automations for the businesses around him — systems that answered when owners couldn't, booked when doors were closed, and kept revenue moving through the worst year small business had ever seen.</p>
+        <p>What started as one person solving a shutdown problem became the foundation of everything we do: <b class="oj">a business should never stop working, even when you have to.</b></p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-year">20<span class="oj">23</span><span class="tag-line">The partnership</span></div>
+      <div class="tl-body">
+        <h3>The kid he grew up with becomes <span class="oj">the other half of the machine.</span></h3>
+        <p><b>Andrew Garcia</b> and Cam go back to the beginning — they grew up together long before either of them knew what a CRM was. So when Andrew saw what Cam was building, he didn't just see a business. He saw the missing half of one.</p>
+        <p>Andrew brought the skills the machine needed to scale: <b>lead reactivation and CRM management</b> — the discipline of waking up dormant customer lists, organizing the pipeline, and making sure no lead ever falls through a crack again. Cam builds the systems; Andrew makes them hunt.</p>
+        <p>In 2023 he came on as <b>co-owner and vice president</b>, and the operation went from "websites and automations" to a complete revenue machine: capture, convert, retain.</p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-year">20<span class="oj">26</span><span class="tag-line">The name catches up</span></div>
+      <div class="tl-body">
+        <h3>The work had a pattern. <span class="oj">We named the company after it.</span></h3>
+        <p>Six years in, every client engagement kept proving the same thing: the wins came from being <b>always on</b>. The lead answered at 2am. The missed call texted back in seconds. The customer list reactivated while the owner slept.</p>
+        <p>So the company took the name of the thing it actually sells: <b class="oj">Twenty47</b>. Your business, booked 24/7. Same team, same city, same obsession — now with a name that says it out loud.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="slash-eyebrow">// The team</p>
+      <h2><span class="s">Two guys from Cleveland. </span><span class="c">One machine.</span></h2>
+    </div>
+    <div class="tgrid">
+      <div class="tcard reveal">
+        <div class="port p-cam">
+          <span class="role-stamp">Founder · Est. 2020</span>
+          <div class="mono-ring">CB</div>
+        </div>
+        <div class="info">
+          <h3>Cam Balazy</h3>
+          <div class="rl">Owner &amp; Founder</div>
+          <p>Started Twenty47 in the 2020 shutdown by putting his certifications to work building websites and automations for Cleveland businesses that couldn't afford to go quiet.</p>
+          <p>Today he architects the whole machine — <b>the sites, the AI systems, the automations</b> — everything that answers, books, and works while the owner does the actual job.</p>
+          <div class="skills"><span>Websites</span><span>AI Automation</span><span>Systems Design</span></div>
+        </div>
+      </div>
+      <div class="tcard reveal">
+        <div class="port p-drew">
+          <span class="role-stamp">Co-Owner · Since 2023</span>
+          <div class="mono-ring">AG</div>
+        </div>
+        <div class="info">
+          <h3>Andrew Garcia</h3>
+          <div class="rl">Co-Owner &amp; Vice President</div>
+          <p>Grew up with Cam — joined the company in 2023 and turned good systems into a complete revenue machine.</p>
+          <p>Andrew runs <b>lead reactivation and CRM management</b>: waking up dormant customer lists, organizing every pipeline, and making sure no lead ever slips through a crack again.</p>
+          <div class="skills"><span>Lead Reactivation</span><span>CRM Management</span><span>Pipeline Ops</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREED (cream strip) -->
+<section class="creed">
+  <div class="wrap inner">
+    <p class="slash-eyebrow reveal">// What we believe</p>
+    <h2 class="reveal"><span class="s">If it doesn't fill the calendar, </span><span class="c">it doesn't <span class="oj">ship</span>.</span></h2>
+    <p class="reveal">We came up during a year when small businesses died from silence — so we don't sell decoration, impressions, or vibes. Every system we build is measured against one number: how many customers it put on your calendar. That's the whole religion.</p>
+    <div class="xxx" aria-hidden="true">✗ ✗ ✗</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="start-card reveal">
+        <h2><span class="s">Start a </span><span class="c">project</span></h2>
+        <svg class="scribble" viewBox="0 0 420 14" aria-hidden="true"><path pathLength="1" d="M4 9 C 40 3, 70 12, 105 7 S 175 3, 210 8 S 290 12, 330 6 S 400 4, 416 8"/></svg>
+        <p>Think Twenty47 might be a good fit for your business? Let's start with a free AI Opportunity Audit — a conversation, not a pitch.</p>
+        <a class="stamp solid" href="mailto:codedbycb@gmail.com?subject=Free%20AI%20Opportunity%20Audit"><span class="ast">✳</span> Get in touch</a>
+      </div>
+      <div class="ft-col reveal">
+        <div class="colhead">Twenty47 Marketing</div>
+        <ul>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#system">The System</a></li>
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="ft-col reveal">
+        <div class="colhead">Connect with us</div>
+        <ul>
+          <li><a href="mailto:codedbycb@gmail.com">Contact</a></li>
+          <li><a href="https://instagram.com/twenty47marketing" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+        <div class="small">
+          Cleveland, Ohio<br>
+          <a href="mailto:codedbycb@gmail.com">codedbycb@gmail.com</a><br>
+          Your business, booked 24/7.
+        </div>
+      </div>
+    </div>
+    <div class="watermark" aria-hidden="true">47</div>
+    <div class="ft-bot">© 2026 Twenty47 Marketing | All rights reserved | <a href="#">Privacy</a></div>
+  </div>
+</footer>
+
+</main>
+
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.addEventListener('load', function(){ document.documentElement.classList.add('loaded'); });
+  setTimeout(function(){ document.documentElement.classList.add('loaded'); }, 900);
+
+  var lenis = null;
+  if (window.Lenis && !reduced) {
+    lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+    (function raf(t){ lenis.raf(t); requestAnimationFrame(raf); })(0);
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var id = a.getAttribute('href');
+        if (id.length > 1 && document.querySelector(id)) { e.preventDefault(); lenis.scrollTo(id); }
+      });
+    });
+  }
+
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function(e){ io.observe(e); });
+    setInterval(function(){
+      els.forEach(function(e){
+        if (!e.classList.contains('in') && e.getBoundingClientRect().top < window.innerHeight) e.classList.add('in');
+      });
+    }, 800);
+  })();
+
+  (function () {
+    var svgs = document.querySelectorAll('footer .scribble');
+    if (!('IntersectionObserver' in window) || reduced) { svgs.forEach(function(s){ s.classList.add('draw'); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('draw'); io.unobserve(en.target); } });
+    }, { threshold: 0.4 });
+    svgs.forEach(function(s){ io.observe(s); });
+  })();
+</script>
+</body>
+</html>
