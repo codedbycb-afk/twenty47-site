@@ -397,3 +397,25 @@ body.menu-open .drawer nav a:nth-child(5){ transition-delay: .28s; } body.menu-o
 .cinfo .row .v { font-family: var(--cond); text-transform: uppercase; font-size: 22px; }
 .cinfo .row .v a:hover { color: var(--orange-soft); }
 @media (max-width: 860px){ .contact-grid { grid-template-columns: 1fr; } }
+
+/* ---- pricing ladder ---- */
+.ladder { border-top: 1px solid var(--line); padding: 90px 0 70px; }
+.rung { display: grid; grid-template-columns: 70px 1fr 260px; gap: 40px; align-items: start; padding: 44px 0; border-top: 1px solid var(--line); }
+.rung:last-of-type { border-bottom: 1px solid var(--line); }
+.rung.free { background: linear-gradient(90deg, rgba(249,115,22,.07), transparent 60%); padding-left: 18px; margin-left: -18px; border-left: 2px solid var(--orange); }
+.rung .r-num { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; color: var(--muted); padding-top: 8px; }
+.rung h3 { font-family: var(--cond); text-transform: uppercase; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.04; margin: 0 0 14px; letter-spacing: .01em; }
+.rung .r-body p { color: var(--cream-dim); font-size: 15px; max-width: 62ch; margin: 0 0 18px; }
+.rung .r-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 32px; }
+.rung .r-list span { font-size: 13.5px; color: var(--cream-dim); padding: 7px 0; border-bottom: 1px solid var(--line); }
+.rung .r-price { text-align: right; position: sticky; top: 110px; }
+.rung .r-price b { display: block; font-family: var(--cond); font-size: clamp(34px, 3.6vw, 48px); line-height: 1; color: var(--cream); letter-spacing: .01em; }
+.rung .r-price b i { font-style: normal; font-size: .45em; color: var(--cream-dim); }
+.rung .r-price small { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 10px 0 18px; line-height: 1.6; }
+.rung .r-price .stamp { display: inline-flex; }
+.rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 44px; }
+.rules div { font-size: 14px; color: var(--cream-dim); border-top: 2px solid var(--orange); padding-top: 14px; }
+.rules b { color: var(--cream); display: block; margin-bottom: 4px; }
+.book-embed { border: 1px solid var(--line); background: var(--panel); padding: 8px; }
+.book-embed iframe { width: 100%; border: none; min-height: 700px; display: block; background: transparent; }
+@media (max-width: 900px){ .rung { grid-template-columns: 1fr; gap: 18px; } .rung .r-price { text-align: left; position: static; } .rules { grid-template-columns: 1fr; } .rung .r-list { grid-template-columns: 1fr; } }
