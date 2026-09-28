@@ -11,6 +11,7 @@
   var links = [
     ['index.html', 'Home'],
     ['services.html', 'Services'],
+    ['pricing.html', 'Pricing'],
     ['work.html', 'Work'],
     ['about.html', 'About'],
     ['blog.html', 'Blog'],
